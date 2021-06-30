@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YbL-3O-bcn">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Screen-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainScreen" customModule="Goods_store" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ZP-Vt-oPC">
+                                <rect key="frame" x="107" y="323" width="200" height="50"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="25"/>
+                                <state key="normal" title="Store">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="onStoreButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w4d-GN-SGo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mID-rp-Z2Z">
+                                <rect key="frame" x="107" y="423" width="200" height="50"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="25"/>
+                                <state key="normal" title="Statistics">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="onStatisticsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IUY-Mi-tMa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ttS-8T-3C5">
+                                <rect key="frame" x="107" y="523" width="200" height="50"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="OtD-f2-4PA"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="bB1-K7-fj9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="25"/>
+                                <state key="normal" title="Transactions">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTransactionsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8iU-Z1-1xY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ttS-8T-3C5" firstAttribute="top" secondItem="mID-rp-Z2Z" secondAttribute="bottom" constant="50" id="FDa-YC-cec"/>
+                            <constraint firstItem="5ZP-Vt-oPC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lj1-Eb-5V9"/>
+                            <constraint firstItem="ttS-8T-3C5" firstAttribute="width" secondItem="5ZP-Vt-oPC" secondAttribute="width" id="Oyp-Pz-tel"/>
+                            <constraint firstItem="mID-rp-Z2Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sgi-Hy-c6q"/>
+                            <constraint firstItem="mID-rp-Z2Z" firstAttribute="top" secondItem="5ZP-Vt-oPC" secondAttribute="bottom" constant="50" id="Te2-In-ZbS"/>
+                            <constraint firstItem="ttS-8T-3C5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ujr-Pp-exV"/>
+                            <constraint firstItem="ttS-8T-3C5" firstAttribute="height" secondItem="5ZP-Vt-oPC" secondAttribute="height" id="hIt-2Z-6ZA"/>
+                            <constraint firstItem="mID-rp-Z2Z" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oWv-am-exE"/>
+                            <constraint firstItem="mID-rp-Z2Z" firstAttribute="width" secondItem="5ZP-Vt-oPC" secondAttribute="width" id="tf5-c5-HFb"/>
+                            <constraint firstItem="mID-rp-Z2Z" firstAttribute="height" secondItem="5ZP-Vt-oPC" secondAttribute="height" id="uYO-vF-q2g"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7JY-20-dOQ"/>
+                    <connections>
+                        <outlet property="statisticsButton" destination="mID-rp-Z2Z" id="svL-TB-oHh"/>
+                        <outlet property="storeButton" destination="5ZP-Vt-oPC" id="eXg-KE-nYd"/>
+                        <outlet property="transactionsButton" destination="ttS-8T-3C5" id="1Qo-60-Cb2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="867" y="80"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9ou-r8-iLW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YbL-3O-bcn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vjo-dv-fhv">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="elS-5O-Hih"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hJY-qg-Q7D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="79.6875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
